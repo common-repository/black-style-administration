@@ -1,0 +1,275 @@
+/*  Some hacks */
+* html #poststuff{height:100%; /* kill peekaboo bug in IE */}
+/* This is the Holly Hack \*/
+* html .wrap{height:1%}
+/* For Win IE's eyes only */
+/*  Basic settings */
+html{font-size:100%}
+body{position:relative; margin:0; padding:0; border:none; font:0.6875em "lucida sans","myriad",verdana,arial,sans-serif; /* reset base font size to 11px */}
+p, ol, ul, table, form, textarea, input, select, li, th, tr, td, dl, dd, dt, 
+a, a:link, a:visited, a:hover, a:active, a:focus{font:normal 1em/1.3em "lucida sans","myriad",verdana,arial,sans-serif}
+li, dd{margin-bottom:6px}
+img{border:none}
+/* For some reason the admin page has a non-compliant <br clear=both>element after the submenu.
+This gets rid of it and still allows br elements within the main page */
+br{display:none}
+
+.wrap br{display:inline}
+
+/* Generic links */
+a, a:link, a:visited{border-bottom:none;  text-decoration:none}
+a:hover, a:active, a:focus{text-decoration:none; border-bottom:none}
+
+/* Generic titles */
+h2{font:normal 1.8em/2.2em "lucida sans","myriad",verdana,arial,sans-serif; ; margin:5px 10px; padding:0 10px; border-width:0 0 0 4px; border-style:solid; text-transform:uppercase}
+h2 small.quickjump{display:inline; font:italic 0.7em; border:none; text-transform:none; text-align:right; padding:5px 10px}
+h2 small.quickjump a{text-decoration:none; border-bottom:0; font-size:1em; padding:0}
+
+/* Generic form styles */
+textarea, input, select{border:1px solid; margin:1px; padding:3px}
+input:focus, textarea:focus, label:focus{border:1px solid}
+label{cursor:pointer}
+
+fieldset{border:none; padding:3px}
+fieldset label.selectit{display:block; font-size:11px; padding:0 2px}
+fieldset label.selectit:hover{}
+fieldset legend{padding:.1em .3em}
+fieldset span.cat-nest{display:block; margin-left:10px}
+fieldset.options{padding:1em}
+fieldset.options legend{font-size:16px}
+
+form, label input{margin:0; padding:0}
+
+/* Header */
+#wphead{padding:8px 20px}
+#wphead a, #wphead a:link, #wphead a:visited{}
+#wphead a:hover, #wphead a:active, #wphead a:focus{}
+#wphead h1{font:normal 2em "lucida sans","myriad",verdana,arial,"helvetica neue",helvetica,arial,sans-serif; letter-spacing:0; margin:0}
+#wphead h1 span{font-size:.7em; letter-spacing:0}
+#user_info{position:absolute; right:1em; top:0; font-size:.9em}
+#user_info a, #user_info a:link, #user_info a:visited{text-decoration:none}
+#user_info a:hover, #user_info a:active, #user_info a:focus{}
+
+/* Page Wrapper */
+.wrap{clear:none; border:1px solid #ccc; margin:15px; padding:.5em 1em}
+.wrap h2{margin:.8em 0 .5em; clear:none}
+div.submenu_page div.wrap{margin-left:160px}
+
+/* Dashboard Styles */
+#planetnews ul{list-style:none; margin:0; padding:0}
+#planetnews li{width:17%; margin:1%; float:left}
+#planetnews li a{border:solid 1px; display:block; padding:.5em; height:6em; overflow:hidden}
+#zeitgeist{border:1px solid; float:right; font-size:1em; margin:.5em 1em; padding:1em; width:40%}
+#zeitgeist h2, fieldset legend a{border-bottom:none}
+#zeitgeist h2{margin-top:0; border:none; font-size:1.4em; text-align:center}
+#zeitgeist h3{border-bottom:1px solid #ccc; font-size:1.2em; margin:1em 0 0}
+#zeitgeist h3 cite{font-size:12px; font-style:normal}
+#zeitgeist li, #zeitgeist p{margin:.2em 0}
+#zeitgeist ul{margin:0 0 .3em .6em; padding:0 0 0 .6em}
+
+/* Random styles */
+/* Theme selector pages */
+#currenttheme img{border:1px solid; float:left; margin-right:1em; margin-bottom:1.5em; width:300px}
+#currenttheme{min-height:250px; height:auto}
+/* for Internet Explorer */
+/*\*/
+* html #currenttheme{height:250px}
+/**/
+.available-theme{width:30%; margin:0 1em; float:left; text-align:center; height:28em; overflow:hidden}
+div.available-theme+*{clear:left}
+div.available-theme+div.available-theme{clear:none}
+.available-theme a.screenshot{width:250px; height:200px; display:block; border:1px solid; margin:auto; margin-bottom:10px; overflow:hidden}
+.available-theme a.screenshot:hover{/*border:1px solid #666; */}
+.available-theme img{width:100%}
+
+/* Menu Styles */
+#adminmenu{position:relative; margin:0; padding:2px 10px 2px 20px; border-top:3px solid}
+#adminmenu li{display:inline; line-height:2em; list-style:none; text-align:center}
+#adminmenu .current, #submenu .current{font-weight:bold}
+#adminmenu a{display:inline; font-size:1.1em; line-height:2em; margin:0; padding:3px 8px; text-decoration:none; border:none}
+#adminmenu a:hover, .current{}
+#submenu{position:relative; float:left; width:140px; border:none; margin:15px 0 15px 20px; display:inline; /* fix for ie double margin float bug */padding:0; z-index:1}
+#submenu li{position:relative; display:block; list-style:none; text-align:left; line-height:200%; /* border:solid 1px; /* needed to fix weird ie bug */margin:5px 5px 5px 0; padding:0}
+#submenu .current{border:solid 2px}
+#submenu a{display:block; border:none; font-size:1em; padding:.3em .4em}
+#submenu a:hover, #submenu a:active, #submenu a:focus{}
+
+/* Footer Styles */
+#footer{position:fixed; bottom:0; left:0; background-image:url(images/no-logo.gif); background-position:10px center; background-repeat:no-repeat; border-top:2px solid; height:28px; padding:0; margin:0; width:100%; text-align:right; line-height:24px; z-index:99; font-size:10px}
+#footer a[href="http://wordpress.org/"]{position:absolute; display:block; top:0; left:10px; width:111px; height:28px}
+#footer p{margin-right:10px}
+#footer p+p:after{content:"::::Design by Jose Gonzalez, http://savant.be/"}
+#footer a[href="http://wordpress.org/"] img{display:none}
+
+/*
+#footer{clear:both; text-align:center}
+#footer a{border:0}
+*/
+/* Login Page Styles */
+/* THESE ARE NOT INCLUDED HERE BECAUSE THEY CANNOT BE ALTERED THROUGH A PLUGIN
+ -- THIS PLUGIN IS ONLY CALLED IF A USER IS ALREADY LOGGED IN */
+/* Your Profile Page */
+#your-profile fieldset{float:left; width:40%; border:1px solid; padding:.5em 2em; margin:1em}
+#your-profile fieldset input{width:100%; font-size:1.8em; padding:2px}
+#your-profile fieldset textarea{width:100%; padding:2px}
+#your-profile legend{font-family:Georgia,"Times New Roman",Times,serif; font-size:2em}
+
+/* Edit Post Items */
+/* The Upload File Box */
+#uploading{border-style:none; padding:0; margin:10px 0 16px 0; height:16em; width:100%; /*overflow-y:hidden; */}
+.attachmentlinks{margin:0; height:4em; width:100%}
+
+/* Layout boxes */
+#titlediv, #guiddiv{margin:0; padding:0}
+#postdiv{margin:0; padding:0}
+#postdivrich{margin:0; padding:0}
+#content{margin:0; padding:2%; width:96%}
+#titlediv input, #guiddiv input{margin:0; width:97%; padding:2px; /* cannot use % here b/c of IE bug */}
+#poststuff{margin-right:195px}
+#postcustom .updatemeta, #postcustom .deletemeta{margin:auto}
+#postcustom table{border:1px solid #ccc; margin:0; width:100%}
+#postcustomstuff h3{margin-top:0}
+#postcustom table input, #postcustom table textarea{width:95%}
+#title{font-size:1.5em}
+#postexcerpt div{margin-right:8px}
+#excerpt{margin:0; height:4em; overflow:auto; width:500px}
+#save{width:15em}
+
+/* Options Page */
+.optiontable{width:100%}
+.optiontable td, .optiontable th{padding:.5em}
+.optiontable th{width:33%; text-align:right}
+
+/* Manage Posts Page */
+/* For displaying Comments that haven't been approved yet */
+.unapproved{}
+.unapproved a:link{}
+.unapproved a:visited{}
+.unapproved a:hover{}
+/* Navigation for pages of posts */
+.navigation{display:block; text-align:center; margin-top:10px; margin-bottom:30px}
+.alignleft{float:left}
+.alignright{float:right}
+
+/* Manage Comments Page &Awaiting Moderation Page */
+.commentlist li{border-bottom:1px solid; padding:.3em 1em}
+
+/* Administrative Options Update Message Styles */
+.updated{border:1px solid; margin:1em 15px 10px; padding:0 1em 0 3em}
+div.submenu_page .updated, div.submenu_page .error{margin-left:160px}
+.error{border:1px solid; margin:1em 15px 10px; padding:0 1em 0 3em}
+
+/* Quicktags Styles (for when visual rich editor is not used) */
+#quicktags{margin-left:-1px}
+#quicktags #ed_strong{font-weight:bold}
+#quicktags #ed_link{color:blue; text-decoration:underline}
+#quicktags #ed_del{text-decoration:line-through}
+#quicktags #ed_em{font-style:italic}
+#quicktags #ed_code{font-family:"Courier New",Courier,mono}
+
+/* Form Buttons */
+.submit input, .submit input:focus, .button{border:3px double; background:url( images/fade-butt.png ); padding:0.25em}
+.submit input:active, .button:active{border:3px double}
+.submit, .editform th, #postcustomsubmit{text-align:right}
+#deletepost:hover{}
+
+/* Plugins Page table */
+table .vers, table .name{text-align:center}
+
+/* Edit File &Edit Template Styles */
+#template div{margin-right:190px}
+* html #template div{margin-right:0}
+#template, #template div, #editcat, #addcat{zoom:1}
+#template textarea{font:small 'Courier New',Courier,monospace; width:97%}
+#templateside{float:right; width:170px}
+#templateside h3, #postcustom p{margin:0}
+#templateside ol, #templateside ul{list-style:none; margin:.5em; padding:0}
+
+/* Template tag, get_the_category_list */
+.post-categories{display:inline; margin:0; padding:0}
+.post-categories li{display:inline}
+
+/* MOVABLE BOXES IN "WRITE POST"PAGE */
+/* Lots of styles here -- rest of file is this section */
+.dbx-clone{position:absolute; visibility:hidden}
+.dbx-clone, .dbx-clone .dbx-handle-cursor{cursor:move !important}
+.dbx-dummy{display:block; width:0; height:0; overflow:hidden}
+.dbx-group, .dbx-box, .dbx-handle{position:relative; display:block}
+#grabit{width:100%}
+/****************************************************************
+  avoid padding, margins or borders on dbx-box, 
+  to reduce visual discrepancies between it and the clone.  
+  overall, dbx-box is best left as visually unstyled as possible 
+*****************************************************************/
+.dbx-box{margin:0; padding:0; border:none}
+/* Can change this */
+#moremeta fieldset, #advancedstuff fieldset{margin-bottom:1em}
+#moremeta fieldset div{margin:2px 0 0 0; padding:7px}
+#moremeta{line-height:130%; margin:0 0 0 -188px; position:relative; float:right; right:-195px; width:188px}
+#moremeta select{width:96%}
+#slugdiv input, #passworddiv input, #authordiv select, #thumbdiv input, #parentdiv input{margin-top:.5em; width:90%}
+#moremeta h3, #advancedstuff h3{padding:3px; font-weight:normal; font-size:13px}
+#advancedstuff div{margin-top:.5em}
+#categorydiv div div{height:auto; overflow:auto}
+#ajaxcat input{border:1px solid #ccc}
+
+/* default box styles */
+/* toggle state of inner content area */
+.dbx-box-open .dbx-content{display:block}
+.dbx-box-closed .dbx-content{display:none}
+#moremeta .dbx-content{background:url(images/box-butt.gif) no-repeat bottom right; padding-bottom:15px; padding-right:2px}
+#moremeta fieldset.dbx-box-closed{background:url(images/box-butt.gif) no-repeat bottom; padding-bottom:14px}
+/* handles */
+.dbx-handle{padding:6px 1em 2px; font-size:12px; margin:0}
+#moremeta .dbx-handle{padding:6px 1em 2px; font-size:12px; background:#fff url(images/box-head.gif) no-repeat right}
+#moremeta .dbx-box{background:url(images/box-bg.gif) repeat-y right}
+
+/* advancedstuff styles */
+#advancedstuff div.dbx-b-ox-wrapper{background:url(images/box-butt-left.gif) no-repeat bottom left}
+#advancedstuff div.dbx-content{margin-left:10px; background:url(images/box-bg-stretch.gif) repeat-y right; padding:10px 10px 15px 0}
+#advancedstuff fieldset.dbx-box{padding-bottom:9px; margin-left:8px; background: #404040 url(images/box-butt-right.gif) no-repeat bottom right}
+#advancedstuff div.dbx-h-andle-wrapper{margin:0 0 0 -7px; background:url(images/box-head-left.gif) no-repeat top left}
+#advancedstuff h3.dbx-handle{margin-left:13px; margin-bottom:-7px; padding:6px 1em 0 3px; background:url(images/box-head-right.gif) no-repeat top right}
+#advancedstuff div.dbx-c-ontent-wrapper{margin-left:-7px; margin-right:0; background:url(images/box-bg-left.gif) top left}
+#postexcerpt div.dbx-content{padding-right:10px}
+
+/* handle cursors */
+.dbx-handle-cursor{cursor:move}
+
+/* toggle images */
+a.dbx-toggle, a.dbx-toggle:visited{display:block; overflow:hidden; background-image:url( images/toggle.gif ); position:absolute; top:0; right:0; background-repeat:no-repeat; border:0; margin:0; padding:0}
+#moremeta a.dbx-toggle, #moremeta a.dbx-toggle-open:visited{height:25px; width:27px; background-position:0 0}
+#moremeta a.dbx-toggle-open, #moremeta a.dbx-toggle-open:visited{height:25px; width:27px; background-position:0 -25px}
+#advancedstuff a.dbx-toggle, #advancedstuff a.dbx-toggle-open:visited{height:22px; width:22px; top:3px; right:5px; background-position:0 -3px}
+#advancedstuff a.dbx-toggle-open, #advancedstuff a.dbx-toggle-open:visited{height:22px; width:22px; top:3px; right:5px; background-position:0 -28px}
+* html #postexcerpt .dbx-toggle-open, * html #postexcerpt .dbx-toggle-open{padding-right:0px}
+
+#categorychecklist{margin-right:6px}
+/* additional clone styles */
+.dbx-clone{opacity:0.8; -moz-opacity:0.8; -khtml-opacity:0.8; filter:alpha(opacity=80)}
+#newcat{width:120px; margin-right:5px}
+input#catadd{border:1px solid; font-size:10px; padding:0; margin:0; font-weight:bold; height:20px; margin-bottom:2px; text-align:center; width:37px}
+#howto{font-size:11px; margin:0 5px; display:block}
+#jaxcat{margin:0; padding:0}
+
+/* NOT INCLUDED:#attachmentlinks, #themeselect, form#upload, .attpreview, 
+#login, .anchors, #ed_toolbar, .quicktags, .search, 
+#categorydiv input, #poststatusdiv input, #commentstatusdiv input, #pingstatusdiv input*/
+a.delete:hover{}
+a.edit, a.delete, a.edit:hover, a.delete:hover{border-bottom:none; display:block; padding:5px 0; text-align:center}
+a.edit:hover{}
+.alternate{}
+.active td{}
+.active .name{}
+.alternate.active td{}
+.alternate.active .name{}
+.checkbox{border:none; margin:0; padding:0}
+.code{font-family:"Courier New",Courier,monospace}
+.clear{clear:both; height:2px}
+.hidden{display:none}
+
+/* A handy div class for hiding controls.
+   Some browsers will disable them when you
+   set display:none; */
+.zerosize{height:0; width:0; margin:0; border:0; padding:0; overflow:hidden; position:absolute}
+
